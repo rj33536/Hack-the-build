@@ -24,3 +24,15 @@ Employers acn verify the workers using otp
 3. Search workers
 [![search-ss.png](https://i.postimg.cc/FzwBXbcZ/search-ss.png)](https://postimg.cc/gLqDvZgX)
 
+4. Post Jobs
+[![post-job-ss.png](https://i.postimg.cc/FzbDwtr9/post-job-ss.png)](https://postimg.cc/9wMdqnwS)
+
+5. USSD on your mobile phone (No Need to have smartphone and Internet connection )
+[![Ussd.png](https://i.postimg.cc/Xv7qC9Gx/Ussd.png)](https://postimg.cc/LJwmdYVZ)
+
+## Stack used 
+1.React js
+2.BootStrap
+3.Firebase
+4.Node js
+5.Africa's talking Api
