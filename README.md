@@ -36,3 +36,9 @@ Employers acn verify the workers using otp
 3.Firebase
 4.Node js
 5.Africa's talking Api
+
+
+## DEPLOYED ON WEB
+https://kaam-dhandha.herokuapp.com/login
+
+## Use react commmands like 'npm install' and 'npm start' tp run this web app at local host which is vairly easy and simple
