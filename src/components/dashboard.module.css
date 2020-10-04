@@ -1,0 +1,18 @@
+.mgrid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-image: url("https://i.pinimg.com/564x/26/1c/87/261c873caad55938277c6491f6daec90.jpg");
+}
+
+.rgrid{
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.lgrid{
+
+    padding: 3rem 0;
+
+
+}

@@ -1,0 +1,32 @@
+/* *{
+    box-sizing: border-box;
+}
+#allUsers{
+    
+    width: 90%;
+    margin: 40px  auto;
+}
+.search--container{
+    margin: 40px;
+}
+.bubble{
+    padding: 6px;
+    border-radius: 30px;
+    background-color: aqua;
+    width: fit-content;
+    margin: 5px;
+}
+.user-card{
+    width: 20vw;
+    min-width: 20vw;
+    
+    border: 1px solid lightgray;
+} */
+#searchbar{
+    width: 80%;
+    border: solid 1px gray;
+    border-radius: 3px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
