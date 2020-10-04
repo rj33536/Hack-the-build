@@ -1,8 +1,6 @@
 
 .card{
    
-   
-   
    font-family: "Roboto", sans-serif;
    background: rgb(12,8,97);
    background: radial-gradient(circle, rgba(12,8,97,1) 15%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
@@ -20,4 +18,11 @@
  .card button{
     margin: 5%;
  }
+
+ .card h4,h3,h5,h6{
+    text-align: center;
+ }
+.card hr{
+   border: 1px solid black;
+}
 

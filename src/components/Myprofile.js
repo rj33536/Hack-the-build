@@ -53,20 +53,21 @@ function Ecard(props) {
 
       <div className={classes.card}>
         <div className={classes.content}>
-          <h2>{user.fullname}</h2>
-          <h4>{user.phone} </h4>
-          <h4>MY Complete Address </h4>
-          <h4>{user.address} </h4>
+          <h3>{user.fullname?user.fullname.toUpperCase():""}</h3>
+          <h5>{user.phone} </h5>
+          
+          <h6>{user.address?user.address.toUpperCase():""} </h6>
           <Button variant="info">Add New jobs</Button>
           <Button onClick={getLocation} variant="info">Get my location</Button>
+          <br/>
           <h4>My posts </h4>
           <hr></hr>
           <div className={classes.content}>
             {
               jobs.map((job) => {
                 return <div>
-                  <h5>{job.title}</h5>
-                  <p>{job.description}</p>
+                  <h6>{job.title}</h6>
+                  <h6>{job.description}</h6>
                   <hr></hr>
                 </div>;
               })

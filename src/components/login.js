@@ -33,7 +33,8 @@ function Login(props) {
         console.log(result);
         setisLoggedIn(true);
         console.log("verified");
-        document.querySelector('label').textContent += result.user.phoneNumber + "Number Verified";
+       // document.querySelector('label').textContent += result.user.phoneNumber + "Number Verified";
+       alert("Number verified successfully");
       }).catch(function (error) {
         console.error(error);
       });
@@ -43,10 +44,12 @@ function Login(props) {
   }
 
   return (
-    <div className={classes.back}> 
+    <div className={classes.back}>
+       
+    <h1 className={classes.heading}>Kaam Dhandha</h1>
     
     <div className={classes.loginpage}> 
-      
+    
       <form onSubmit={handleSubmit(onSubmitForm)} className={classes.form}>
         <div class="form-group" >
           

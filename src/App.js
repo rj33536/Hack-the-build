@@ -18,6 +18,7 @@ const App = () => {
 
             <Router>
               <MenuNavbar setSection={setSection} />
+              <Route path="/" exact component={Dashboard} />
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/searchWorker" component={SearchWorker} />
               <Route path="/postjob" component={PostJob} />
