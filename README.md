@@ -19,10 +19,10 @@ Employers acn verify the workers using otp
 [![login-ss.png](https://i.postimg.cc/8Pt74yRM/login-ss.png)](https://postimg.cc/PPvfrQF5)
 
 2. Dashboard
-[![dashboard.png](https://i.postimg.cc/d16FFft9/dashboard.png)](https://postimg.cc/47YqbBcK)
+[![dashboard.png](https://user-images.githubusercontent.com/61561415/95918361-46106800-0dc9-11eb-96a3-d174683fc908.png)
 
 3. Search workers
-[![search-ss.png](https://i.postimg.cc/FzwBXbcZ/search-ss.png)](https://postimg.cc/gLqDvZgX)
+[![search-ss.png](https://user-images.githubusercontent.com/61561415/95918359-44df3b00-0dc9-11eb-8bdc-091d70f32879.png)
 
 4. Post Jobs
 [![post-job-ss.png](https://i.postimg.cc/FzbDwtr9/post-job-ss.png)](https://postimg.cc/9wMdqnwS)
