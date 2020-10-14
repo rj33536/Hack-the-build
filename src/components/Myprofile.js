@@ -2,7 +2,9 @@ import React,{useState,useEffect} from 'react';
 import { Fragment } from 'react';
 import classes from './Myprofile.module.css'
 import { Button } from 'react-bootstrap';
-import { Redirect } from 'react-router';
+// import { Redirect } from 'react-router';
+import { Redirect, Link } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
 import firebase from "../firebase";
 
 function Ecard(props) {
@@ -47,27 +49,36 @@ function Ecard(props) {
     console.log(position);
     alert(position.coords.latitude + " " + position.coords.longitude);
   }
+  
 
     return (
     <Fragment>
 
       <div className={classes.card}>
         <div className={classes.content}>
+        <img src="https://img.icons8.com/plasticine/100/000000/user-male-circle.png"/>
+
           <h3>{user.fullname?user.fullname.toUpperCase():""}</h3>
           <h5>{user.phone} </h5>
           
-          <h6>{user.address?user.address.toUpperCase():""} </h6>
-          <Button variant="info">Add New jobs</Button>
-          <Button onClick={getLocation} variant="info">Get my location</Button>
+          <h5> {user.address?user.address.toUpperCase():""} </h5>
+          <div className={classes.profilebutton}>
+
+          <Link to="/postjob"><Button variant="info" >Add New jobs</Button></Link>
+          <Link to="/allpost"><Button variant="info" >All posted jobs</Button></Link>
+          </div>
+          
+          
           <br/>
           <h4>My posts </h4>
+          <br/>
           <hr></hr>
-          <div className={classes.content}>
+          <div className={classes.alljob}>
             {
               jobs.map((job) => {
                 return <div>
-                  <h6>{job.title}</h6>
-                  <h6>{job.description}</h6>
+                  <h6>Job title : {job.title}</h6>
+                  <h6>DESCRIPTION : {job.description}</h6>
                   <hr></hr>
                 </div>;
               })

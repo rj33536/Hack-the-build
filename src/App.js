@@ -5,8 +5,10 @@ import WorkerForm from './components/worker'
 import EmployerForm from './components/employeer'
 import PostJob from "./components/postJob"
 import Dashboard from './components/dashboard'
+import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import SearchWorker from "./components/searchWorker"
+import Allpost from './components/allpost';
 const App = () => {
   const [section, setSection] = React.useState("home");
   return (
@@ -22,6 +24,8 @@ const App = () => {
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/searchWorker" component={SearchWorker} />
               <Route path="/postjob" component={PostJob} />
+              <Route path="/allpost" component={Allpost}/>
+
             </Router>
           </div>
         )

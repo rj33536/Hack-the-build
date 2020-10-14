@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import firebase from "../firebase"
 import classes from './worker.module.css';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+var stateData = require('./state.json')
 export default function WorkerForm() {
   const [user, setUser] = useState({});
   const [phone, setPhone] = useState();
@@ -12,7 +16,9 @@ export default function WorkerForm() {
     data["phone"]=phone;
     firebase.database().ref("/userdetail/"+phone).update(data).then((data) => {
       console.log(data.toString());
-  }).catch(() => { }).finally(() => { console.log("posted job") });
+  }).catch(() => { }).finally(() => { 
+    toast("Profile Updated");
+    console.log("posted job") });
 
   }
   useEffect(() => {
@@ -39,6 +45,7 @@ export default function WorkerForm() {
   return (
 
     <div  className={classes.back}>
+      <ToastContainer />
       <form onSubmit={handleSubmit(onSubmitForm)}>
       <div class="form-group row">
           <label class="col-sm-2 col-form-label">Full Name</label>
@@ -67,6 +74,20 @@ export default function WorkerForm() {
           </div>
 
         </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">State</label>
+            <div class="col-sm-10" >
+              <select class="form-control form-control-sm" name="state" ref={register} defaultValue={user.stateData} >
+               {
+                 stateData.map((data)=>{
+                   return <option>{data}</option>
+                 })
+               }
+            
+              </select>
+
+            </div>
+          </div>
 
         <div class="form-group row">
           <label class="col-sm-2 col-form-label">Address</label>
@@ -74,6 +95,8 @@ export default function WorkerForm() {
             <input type="tel" name="address" ref={register} class="form-control" defaultValue={user.address} id="inputPassword3" placeholder="Enter Address" />
           </div> 
         </div>
+
+        
 
         <div class="form-group row">
           <label class="col-sm-2 col-form-label">Aadhar Card No</label>
