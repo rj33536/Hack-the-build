@@ -9,6 +9,7 @@ import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import SearchWorker from "./components/searchWorker"
 import Allpost from './components/allpost';
+import Workerauthenticate from './components/AuthenticateWorker/workerauthenticate';
 const App = () => {
   const [section, setSection] = React.useState("home");
   return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/" exact component={Dashboard} />
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/searchWorker" component={SearchWorker} />
+              <Route path="/Workerauthenticate" component={Workerauthenticate}/>
               <Route path="/postjob" component={PostJob} />
               <Route path="/allpost" component={Allpost}/>
 
