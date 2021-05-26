@@ -11,7 +11,7 @@ import SearchWorker from "./components/searchWorker"
 import Allpost from './components/allpost';
 import Workerauthenticate from './components/AuthenticateWorker/workerauthenticate';
 const App = () => {
-  const [section, setSection] = React.useState("home");
+  const [section, setSection] = React.useState("login");
   return (
     <div className="App">
       {/* <SearchWorker /> */}

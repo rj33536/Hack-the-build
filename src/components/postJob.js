@@ -4,10 +4,12 @@ import firebase from "../firebase"
 import classes from './worker.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useHistory } from "react-router-dom";
 var stateData = require('./state.json')
 
 export default function PostJob() {
   const [user, setUser] = useState({});
+  const history = useHistory();
   const { register, handleSubmit } = useForm();
   function onSubmitForm(data) {
     console.log(data);
@@ -18,8 +20,7 @@ export default function PostJob() {
       console.log(data.toString());
     }).catch(() => { }).finally(() => { 
       console.log("posted job")
-      toast("posted job"); });
-      
+      toast("posted job", {onClose:()=>{history.push("/allpost")}}); });
     }
     
 

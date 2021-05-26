@@ -26,6 +26,10 @@ function Login(props) {
   const handleClick = () => {
     var recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha');
     var number = document.getElementById("phone").value;
+    if(number==="9999999999"){
+      setisLoggedIn(true);
+      alert("Number verified successfully");
+    }
     firebase.auth().signInWithPhoneNumber("+91" + number, recaptcha).then(function (e) {
       var code = prompt('Enter the OTP', '');
       if (code === null) return;
@@ -61,7 +65,7 @@ function Login(props) {
           <Button onClick={handleClick}>Verify Phone Number</Button>
         </div>
         
-
+    You can use dummy number 9999999999
 
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

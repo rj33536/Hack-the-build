@@ -38,12 +38,35 @@ function Allpost() {
     
     
 },[]);
-    
-
     console.log(jobs)
     return (
         <div>
-            
+            <table id="allUsers" class="customers">
+                <th>Title</th>
+                <th>Description</th>
+                <th>Profession</th>
+                <th>State</th>
+
+                {jobs
+                    .map((job, idx) => {
+                        return (
+
+                            <tr className="user-card" >
+                                <td><h5>{job.title}</h5></td>
+                                <td><h5>{job.description}</h5></td>
+                                <td className="">
+                                    {job.role ? job.role
+                                        .map((bubble) => {
+                                            return <div className="bubble">{bubble}</div>
+                                        })
+                                        : (<></>)}
+                                </td>
+                                <td><h5>{user.state}</h5></td>
+                            </tr>
+                        )
+                    })}
+            </table>
+       
         </div>
     )
 }
